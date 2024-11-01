@@ -7,6 +7,6 @@ public interface IGenericRepository<T> where T : BaseEntity
  ValueTask<bool> AddAsync(T entity);
  bool Remove(T entity);
  Task<T> GetAsync(Guid id);
- IQueryable<T> GetAll(Guid id);
+ IQueryable<T> GetAll();
  bool Update(T entity);
 }

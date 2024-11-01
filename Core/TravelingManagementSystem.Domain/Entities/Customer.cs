@@ -6,6 +6,6 @@ public class Customer:Person
 {
     public string Nationality { get; set; }
     public bool IsHealty { get; set; }
-    public string Email { get; set; }
-    public string Phone { get; set; }
+    public Guid GroupId { get; set; }
+    public Group Group { get; set; }    
 }
