@@ -1,43 +1,61 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using TravelingManagementSystem.API.Extensions;
+using TravelingManagementSystem.Application.Abstraction.Services;
 using TravelingManagementSystem.Application.Dtos.RequestDtos;
 using TravelingManagementSystem.Infrastructure.Services.InternalServices;
+using ILogger = Serilog.ILogger;
 
 namespace TravelingManagementSystem.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class GroupController(GroupService _groupService) : Controller
+public class GroupController(IGroupService _groupService,
+    IValidator<GroupRequestDto> _validator,
+    ILogger<GroupController> _logger) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var response =await _groupService.GetAllAsync();
+        _logger.LogInformation("Getting all groups");
+        var response = await _groupService.GetAllAsync();
         return Ok(response);
     }
-    [HttpGet("{Id}")]
+
+    [HttpGet("{id}")]
     public async Task<IActionResult> Get(Guid id)
     {
-        var response =await _groupService.GetAsync(id);
+        _logger.LogInformation("Getting group with id: {id}", id);
+        var response = await _groupService.GetAsync(id);
         return Ok(response);
     }
 
     [HttpPost]
     public async Task<IActionResult> Post(GroupRequestDto requestDto)
     {
-        var response = await _groupService.CreateAsync(requestDto);
-        return Ok(response);
+        var result = await _validator.ValidateAsync(requestDto);
+        _logger.LogInformation("Creating new group");
+        if (result.IsValid)
+        {
+            var response = await _groupService.CreateAsync(requestDto);
+            return Ok(response);
+        }
+        result.AddToModalState(ModelState);
+        return Ok(requestDto);
     }
 
     [HttpPut]
-    public async Task<IActionResult> Put(Guid id,GroupRequestDto requestDto)
+    public async Task<IActionResult> Put(Guid id, GroupRequestDto requestDto)
     {
-        var response = await _groupService.UpdateAsync(id,requestDto);
+        _logger.LogInformation("Updating group with id: {id}", id);
+        var response = await _groupService.UpdateAsync(id, requestDto);
         return Ok(response);
     }
 
     [HttpDelete]
     public async Task<IActionResult> Delete(Guid id)
     {
+        _logger.LogInformation("Deleting group with id: {id}", id);
         var response = await _groupService.RemoveAsync(id);
         return Ok(response);
     }

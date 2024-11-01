@@ -4,7 +4,7 @@ using TravelingManagementSystem.Persistence.Exceptions;
 
 namespace TravelingManagementSystem.API.ExceptionHandlers;
 
-public class NotFoundExceptionHandler( ILogger _logger):IExceptionHandler
+public class NotFoundExceptionHandler( ILogger<NotFoundExceptionHandler> _logger):IExceptionHandler
 {
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext,
         Exception exception,

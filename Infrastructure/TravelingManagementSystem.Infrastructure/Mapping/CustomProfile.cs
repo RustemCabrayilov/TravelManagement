@@ -15,5 +15,8 @@ public class CustomProfile:Profile
         CreateMap<GuideRequestDto, GuideResponseDto>().ReverseMap();
         CreateMap<GuideRequestDto, Guide>().ReverseMap();
         CreateMap<GuideResponseDto, Guide>().ReverseMap();
+        CreateMap<GroupRequestDto, GroupResponseDto>().ReverseMap();
+        CreateMap<GroupRequestDto, Group>().ReverseMap();
+        CreateMap<GroupResponseDto, Group>().ReverseMap();
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TravelingManagementSystem.API.ExceptionHandlers;
 
-public class BadRequestExceptionHandler(ILogger _logger) : IExceptionHandler
+public class BadRequestExceptionHandler(ILogger<BadRequestExceptionHandler> _logger) : IExceptionHandler
 {
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception,
         CancellationToken cancellationToken)
