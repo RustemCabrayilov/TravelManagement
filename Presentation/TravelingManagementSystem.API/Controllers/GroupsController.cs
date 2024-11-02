@@ -3,16 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using TravelingManagementSystem.API.Extensions;
 using TravelingManagementSystem.Application.Abstraction.Services;
 using TravelingManagementSystem.Application.Dtos.RequestDtos;
-using TravelingManagementSystem.Infrastructure.Services.InternalServices;
 using ILogger = Serilog.ILogger;
 
 namespace TravelingManagementSystem.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class GroupController(IGroupService _groupService,
+public class GroupsController(IGroupService _groupService,
     IValidator<GroupRequestDto> _validator,
-    ILogger<GroupController> _logger) : ControllerBase
+   ILogger<GroupsController> _logger) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetAll()

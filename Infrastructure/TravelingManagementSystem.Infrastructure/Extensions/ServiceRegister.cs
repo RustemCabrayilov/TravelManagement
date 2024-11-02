@@ -19,7 +19,7 @@ public static class ServiceRegister
         services.AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining(typeof(CustomerValidator)));
         services.AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining(typeof(GroupValidator)));
         services.AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining(typeof(GuideValidator)));
-        ValidatorOptions.Global.LanguageManager.Culture = new System.Globalization.CultureInfo("az");
+        /*ValidatorOptions.Global.LanguageManager.Culture = new System.Globalization.CultureInfo("az");*/
     }
     
 }
