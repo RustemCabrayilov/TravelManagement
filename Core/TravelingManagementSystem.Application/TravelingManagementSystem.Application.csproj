@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Repository\**" />
+      <Compile Remove="Class1.cs" />
+      <Compile Remove="Abstraction\Services\ICustomerService\**" />
+      <Compile Remove="Abstraction\IUnitOfWork\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Repository\**" />
+      <EmbeddedResource Remove="Abstraction\Services\ICustomerService\**" />
+      <EmbeddedResource Remove="Abstraction\IUnitOfWork\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Repository\**" />
+      <None Remove="Abstraction\Services\ICustomerService\**" />
+      <None Remove="Abstraction\IUnitOfWork\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TravelingManagementSystem.Domain\TravelingManagementSystem.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

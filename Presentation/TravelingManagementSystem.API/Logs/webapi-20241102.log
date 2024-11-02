@@ -1,0 +1,43 @@
+2024-11-02 01:26:58.171 -07:00  INF   Getting all guides
+2024-11-02 01:33:08.529 -07:00  INF   Getting all groups
+2024-11-02 01:33:24.193 -07:00  INF   Getting all Customers
+2024-11-02 01:34:15.075 -07:00  INF   Getting all guides
+2024-11-02 01:34:32.355 -07:00  INF  844d563b-6289-441c-559e-08dcfa8d11e2 Deleting a guide with "844d563b-6289-441c-559e-08dcfa8d11e2"
+2024-11-02 01:34:39.769 -07:00  INF   Getting all guides
+2024-11-02 01:59:12.900 -07:00  INF   Getting Customer with Id: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+2024-11-02 01:59:13.692 -07:00  ERR   An unhandled exception has occurred while executing the request.TravelingManagementSystem.Persistence.Exceptions.NotFoundException: This 3fa85f64-5717-4562-b3fc-2c963f66afa6 customer not Found
+   at TravelingManagementSystem.Infrastructure.Services.InternalServices.CustomerService.GetAsync(Guid id) in C:\Users\ASUS\Desktop\PB501\weekxApps\TravelingManagementSystem\Infrastructure\TravelingManagementSystem.Infrastructure\Services\InternalServices\CustomerService.cs:line 47
+   at TravelingManagementSystem.API.Controllers.CustomersController.Get(Guid id) in C:\Users\ASUS\Desktop\PB501\weekxApps\TravelingManagementSystem\Presentation\TravelingManagementSystem.API\Controllers\CustomersController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+
+2024-11-02 01:59:13.730 -07:00  ERR   Exception occured:This 3fa85f64-5717-4562-b3fc-2c963f66afa6 customer not FoundTravelingManagementSystem.Persistence.Exceptions.NotFoundException: This 3fa85f64-5717-4562-b3fc-2c963f66afa6 customer not Found
+   at TravelingManagementSystem.Infrastructure.Services.InternalServices.CustomerService.GetAsync(Guid id) in C:\Users\ASUS\Desktop\PB501\weekxApps\TravelingManagementSystem\Infrastructure\TravelingManagementSystem.Infrastructure\Services\InternalServices\CustomerService.cs:line 47
+   at TravelingManagementSystem.API.Controllers.CustomersController.Get(Guid id) in C:\Users\ASUS\Desktop\PB501\weekxApps\TravelingManagementSystem\Presentation\TravelingManagementSystem.API\Controllers\CustomersController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+
+2024-11-02 01:59:34.565 -07:00  INF   Getting all groups
+2024-11-02 02:00:30.953 -07:00  INF   Getting group with id: "bc6d5d55-eb61-493a-6b7d-08dcfa8fa03e"
+2024-11-02 02:03:04.327 -07:00  INF   Getting all groups
+2024-11-02 02:03:17.122 -07:00  INF   Getting group with id: "bc6d5d55-eb61-493a-6b7d-08dcfa8fa03e"
+2024-11-02 04:27:18.761 -07:00  INF   Getting all groups
+2024-11-02 04:44:14.672 -07:00  INF   Getting all groups
+2024-11-02 04:48:39.873 -07:00  INF   Getting all groups
+2024-11-02 04:49:30.923 -07:00  INF   Getting all groups
